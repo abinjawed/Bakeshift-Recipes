@@ -4,10 +4,7 @@ The playable pokemons are **Pikachu**, **Charmander**, **Squirtle**, **Bulbasaur
 ### Install
 
 ### Code
-The function `emergeVictorious` contains parameters:
--player1, 
--player2, 
--firstAttacker
+The function `emergeVictorious` contains parameters (player1, player2, firstAttacker).
 
 The function `emergeVictorious` also returns the victorious player of each match.
 
