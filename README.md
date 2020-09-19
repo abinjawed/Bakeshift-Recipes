@@ -4,7 +4,7 @@ The playable pokemons are **Pikachu**, **Charmander**, **Squirtle**, **Bulbasaur
 ### Install
 
 ### Code
-A fighter is a "blueprint" object with properties of `health` and `damagePerAttack`. Each playable pokemon is an instance of the blueprint object.
+A fighter is a "blueprint" object with properties of `health` and `damagePerAttack`. Each pokemon is an instance of the blueprint object.
 
 The function `emergeVictorious` contains parameters (player1, player2, firstAttacker), and return the victorious player of each match.
 
