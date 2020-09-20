@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+<body>
+<script>
+function emergeVictorious(player1, player2, firstAttacker) {
+  var healthMeter1 = Math.ceil( player1.health / player2.damagePerAttack );
+  var healthMeter2 = Math.ceil( player2.health / player1.damagePerAttack );
+  if(healthMeter1 < healthMeter2) {
+    return player2.name;
+  } else if(healthMeter2 < healthMeter1) {
+    return player1.name;
+  } else {
+    return firstAttacker;
+  }
+}
+
+// players 1 and 2, their respective healths and damages per attack, and the first attacker
+console.log(emergeVictorious(("Pikachu", 9, 1), ("Charmander", 9, 1), "Pikachu"));
+console.log(emergeVictorious(("Pikachu", 10, 10), ("Squirtle", 5, 5), "Pikachu"));
+console.log(emergeVictorious(("Pikachu", 10, 2), ("Bulbasaur", 5, 5), "Pikachu"));
+console.log(emergeVictorious(("Pikachu", 10, 2), ("Diglett", 5, 5), "Pikachu"));
+console.log(emergeVictorious(("Charmander", 9, 3), ("Pikahu", 20, 5), "Charmander"));
+console.log(emergeVictorious(("Charmander", 9, 3), ("Squirtle", 9, 9), "Charmander"));
+console.log(emergeVictorious(("Charmander", 9, 9), ("Bulbasaur", 5, 4), "Charmander"));
+console.log(emergeVictorious(("Charmander", 9, 5), ("Diglett", 5, 4), "Charmander"));
+console.log(emergeVictorious(("Squirtle", 3, 3), ("Pikachu", 10, 5), "Squirtle"));
+console.log(emergeVictorious(("Squirtle", 8, 5), ("Charmander", 3, 3), "Squirtle"));
+console.log(emergeVictorious(("Squirtle", 2, 2), ("Bulbasaur", 8, 8), "Squirtle"));
+console.log(emergeVictorious(("Squirtle", 8, 2), ("Diglett", 5, 4), "Squirtle"));
+console.log(emergeVictorious(("Bulbasaur", 8, 5), ("Pikachu", 5, 4), "Bulbasaur"));
+console.log(emergeVictorious(("Bulbasaur", 8, 5), ("Charmander", 5, 4), "Bulbasaur"));
+console.log(emergeVictorious(("Bulbasaur", 8, 5), ("Squirtle", 5, 4), "Bulbasaur"));
+console.log(emergeVictorious(("Bulbasaur", 8, 2), ("Diglett", 5, 4), "Bulbasaur"));
+console.log(emergeVictorious(("Diglett", 9, 2), ("Pikachu", 9, 1), "Diglett"));
+console.log(emergeVictorious(("Diglett", 7, 5), ("Charmander", 5, 4), "Diglett"));
+console.log(emergeVictorious(("Diglett", 7, 3), ("Squirtle", 10, 5), "Diglett"));
+console.log(emergeVictorious(("Diglett", 7, 3), ("Bulbasaur", 10, 5), "Diglett"));
+
+</script>
+</body>
+</html>
